@@ -1,11 +1,11 @@
 <template>
   <div>
-    <div>
+    <h2 class="task-info">
       {{ this.$store.state.todaysTask }}
-    </div>
-    <div>
+    </h2>
+    <h2 class="task-info">
       {{ this.$store.state.todaysTaskTime.label }}
-    </div>
+    </h2>
     <button type="button" v-on:click="completeTask">
       Complete
     </button>

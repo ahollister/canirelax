@@ -10,23 +10,24 @@
     </div>
     <div>
       <label for="notification-time">Notification time: </label>
-      <vSelect id="notification-time"
-               v-model="timeSelected"
-               v-bind:options="timeOptions"
-               required />
+      <bFormSelect v-bind:options="timeOptions"
+                   v-model="timeSelected"
+                   required />
     </div>
-    <input type="submit" value="Save your task">
+    <input type="submit" value="Save task">
   </form>
 </template>
 
 <script>
 import options from '@/data/timeoptions.json'
 import vSelect from 'vue-select'
+import bFormSelect from 'bootstrap-vue/es/components/form-select/form-select'
 
 export default {
   name: 'SetTaskForm',
   components: {
-    vSelect
+    vSelect,
+    bFormSelect
   },
   methods: {
     setTask: function (event) {
@@ -40,7 +41,7 @@ export default {
     return {
       task: '',
       timeOptions: options.timeOptions,
-      timeSelected: {label: '6:00 PM', value: '1800'}
+      timeSelected: '1800'
     }
   }
 }
