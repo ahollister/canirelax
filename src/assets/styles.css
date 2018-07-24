@@ -11,8 +11,7 @@ button {
 
 body {
   background: #DA4167;
-  position: relative;
-  min-height: 100vh;
+
 }
 
 #app {
@@ -21,7 +20,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #EBEBD3;
-  min-height: 100vh;
 }
 
 .particles-js-canvas-el {
@@ -29,11 +27,8 @@ body {
 }
 
 .home {
-  max-width: 500px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  max-width: 350px;
+  margin: 0 auto;
 }
 
 h1 {
