@@ -1,18 +1,30 @@
 <template>
   <div class="home">
-    <img src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <TaskComplete v-if="this.$store.state.isCompleted" />
+
+    <Title title="Today's task:"
+           v-if="this.$store.state.todaysTask" />
+    <TodaysTask v-if="this.$store.state.todaysTask" />
+
+    <Title title="Set a task for today"
+           v-if="!this.$store.state.todaysTask && ! this.$store.state.isCompleted" />
+    <SetTaskForm v-if="!this.$store.state.todaysTask && ! this.$store.state.isCompleted" />
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import Title from '@/components/Title.vue'
+import TodaysTask from '@/components/TodaysTask.vue'
+import SetTaskForm from '@/components/SetTaskForm.vue'
+import TaskComplete from '@/components/TaskComplete.vue'
 
 export default {
   name: 'home',
   components: {
-    HelloWorld
+    Title,
+    TodaysTask,
+    SetTaskForm,
+    TaskComplete
   }
 }
 </script>
