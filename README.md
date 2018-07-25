@@ -1,4 +1,4 @@
-# canirelax
+# dailytask
 
 ## Project setup
 ```

@@ -1,20 +1,22 @@
 <template>
   <div class="home">
-    <TaskComplete v-if="this.$store.state.isCompleted" />
+    <transition name="bounce" mode="out-in">
+      <SetTask key="SetTask"
+               v-if="!this.$store.state.todaysTask && ! this.$store.state.isCompleted" />
 
-    <Title title="Today's task:"
-           v-if="this.$store.state.todaysTask" />
-    <TodaysTask v-if="this.$store.state.todaysTask" />
+      <TodaysTask key="TodaysTask"
+                  v-if="this.$store.state.todaysTask" />
 
-    <Title title="Set a task for today"
-           v-if="!this.$store.state.todaysTask && ! this.$store.state.isCompleted" />
-    <SetTaskForm v-if="!this.$store.state.todaysTask && ! this.$store.state.isCompleted" />
+      <TaskComplete key="TaskComplete"
+                    v-if="this.$store.state.isCompleted" />
+    </transition>
   </div>
 </template>
 
 <script>
 import Title from '@/components/Title.vue'
 import TodaysTask from '@/components/TodaysTask.vue'
+import SetTask from '@/components/SetTask.vue'
 import SetTaskForm from '@/components/SetTaskForm.vue'
 import TaskComplete from '@/components/TaskComplete.vue'
 
@@ -23,6 +25,7 @@ export default {
   components: {
     Title,
     TodaysTask,
+    SetTask,
     SetTaskForm,
     TaskComplete
   }

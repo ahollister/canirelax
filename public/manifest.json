@@ -1,6 +1,6 @@
 {
-  "name": "canirelax",
-  "short_name": "canirelax",
+  "name": "Daily Task",
+  "short_name": "dailytask",
   "icons": [
     {
       "src": "/img/icons/android-chrome-192x192.png",

@@ -1,5 +1,7 @@
 <template>
   <div>
+    <Title title="Today's task:" />
+
     <h2 class="task-info">
       {{ this.$store.state.todaysTask }}
     </h2>
@@ -13,8 +15,13 @@
 </template>
 
 <script>
+import Title from '@/components/Title.vue'
+
 export default {
   name: 'TodaysTask',
+  components: {
+    Title
+  },
   methods: {
     completeTask: function () {
       this.$store.commit('completeTodaysTask')

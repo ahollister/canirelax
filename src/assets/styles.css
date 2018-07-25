@@ -1,38 +1,69 @@
+/* Base styles + layout */
 html,
 body
 input {
   box-sizing: border-box;
 }
 
-input,
-button {
-  transition: background 0.2s ease;
+html,
+body {
+  min-height: 100%;
+}
+
+html {
+  display: flex;
+  align-items: center;
+  overflow-x: hidden;
 }
 
 body {
-  background: #DA4167;
-
-}
-
-#app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #EBEBD3;
-}
-
-.particles-js-canvas-el {
-  min-height: 100vh;
+  background: #DA4167;
+  flex: 1;
 }
 
 .home {
-  max-width: 350px;
   margin: 0 auto;
 }
 
+.home * {
+  z-index: 1;
+  position: relative;
+}
+
+
+
+/* Particles canvas */
+.particles-js-canvas-el {
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+
+
+/* Headers */
 h1 {
-  margin-bottom: 40px;
+  font-family: 'Chivo', Helvetica, Arial, sans-serif;
+  margin-top: 0;
+  margin-bottom: 60px;
+  transform: skewY(-5deg);
+  font-size: 52px;
+  text-shadow: 4px 4px #083D77;
+  text-transform: uppercase;
+}
+
+
+
+/* Form fields */
+form {
+  max-width: 310px;
+  margin: 0 auto;
 }
 
 label {
@@ -42,35 +73,60 @@ label {
 }
 
 input[type="text"] {
-  width: 100%;
-  padding: 10px 10px;
-  border: none;
-  border-radius: 5px;
+  padding: 15px 10px;
 }
 
 input[type="text"],
 select {
+  width: 100%;
   margin-bottom: 20px;
+  background: white;
+  border: none;
+  border-radius: 5px;
 }
 
 select {
-  width: 100%;
-  height: 36px;
+  height: 46px;
   border: none;
+  padding-left: 6px;
 }
 
 button,
 input[type="submit"] {
+  padding: 12px 20px 8px 20px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
   background: #083D77;
   color: #EBEBD3;
-  border: none;
-  padding: 8px 16px;
-  border-radius: 5px;
-  font-size: 18px;
+  transition: background 0.2s ease;
 }
 
 button:hover,
 input[type="submit"]:hover {
   background: #0f4e94;
   cursor: pointer;
+}
+
+
+
+/* Bounce transition */
+.bounce-enter-active {
+  animation: bounce-in .5s;
+}
+.bounce-leave-active {
+  animation: bounce-in .5s reverse;
+}
+@keyframes bounce-in {
+  0% {
+    transform: scale(0.75);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
 }
