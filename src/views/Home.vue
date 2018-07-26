@@ -1,6 +1,5 @@
 <template>
   <div class="home">
-    <transition name="bounce" mode="out-in">
       <SetTask key="SetTask"
                v-if="!this.$store.state.todaysTask && ! this.$store.state.isCompleted" />
 
@@ -9,7 +8,7 @@
 
       <TaskComplete key="TaskComplete"
                     v-if="this.$store.state.isCompleted" />
-    </transition>
+    
   </div>
 </template>
 
