@@ -13,7 +13,7 @@
       "type": "image/png"
     }
   ],
-  "start_url": "/index.html",
+  "start_url": "https://gifted-noether-ef08e1.netlify.com/index.html",
   "display": "standalone",
   "background_color": "#083D77",
   "theme_color": "#083D77"
