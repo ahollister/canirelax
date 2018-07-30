@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Task complete!</h1>
+    <Title title="Task complete!" />
     <button type="button" v-on:click="endCompletedState">
       Set a new task
     </button>

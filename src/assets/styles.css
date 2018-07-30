@@ -57,6 +57,8 @@ h1 {
   font-size: 52px;
   text-shadow: 4px 4px #083D77;
   text-transform: uppercase;
+  position: relative;
+  z-index: 999 !important;
 }
 
 
