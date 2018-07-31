@@ -8,12 +8,17 @@
 </template>
 
 <script>
+import Title from './Title.vue'
+
 export default {
   name: 'TaskComplete',
   methods: {
     endCompletedState: function () {
       this.$store.commit('endCompletedState')
     }
+  },
+  components: {
+    Title
   }
 }
 </script>
