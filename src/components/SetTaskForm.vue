@@ -35,6 +35,10 @@ export default {
         'task': this.task,
         'time': this.timeSelected
       })
+
+      this.$notification.show('Hello World', {
+        body: 'This is an example!'
+      }, {})
     }
   },
   data () {
