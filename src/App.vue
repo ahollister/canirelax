@@ -1,7 +1,8 @@
 <template>
   <div id="app">
     <router-view />
-    <vue-particles color="#F4D35E"
+    <vue-particles 
+      color="#F4D35E"
       :particleOpacity="0.5"
       :particlesNumber="80"
       shapeType="circle"
@@ -15,6 +16,7 @@
       :hoverEffect="true"
       hoverMode="grab"
       :clickEffect="true"
-      clickMode="push" />
+      clickMode="push"
+    />
   </div>
 </template>

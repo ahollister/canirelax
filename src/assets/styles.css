@@ -1,7 +1,6 @@
 /* Base styles + layout */
 html,
-body
-input {
+body input {
   box-sizing: border-box;
 }
 
@@ -17,16 +16,17 @@ html {
 }
 
 body {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #EBEBD3;
-  background: #DA4167;
-  background: linear-gradient(0deg, #DA4167 15%, #73537e 90%);
+  color: #ebebd3;
+  background: #da4167;
+  background: linear-gradient(0deg, #da4167 15%, #73537e 90%);
   flex: 1;
 }
 
+/* Home */
 .home {
   margin: 0 50px;
 }
@@ -36,8 +36,6 @@ body {
   position: relative;
 }
 
-
-
 /* Particles canvas */
 .particles-js-canvas-el {
   height: 100vh;
@@ -46,22 +44,18 @@ body {
   left: 0;
 }
 
-
-
 /* Headers */
 h1 {
-  font-family: 'Chivo', Helvetica, Arial, sans-serif;
+  font-family: "Chivo", Helvetica, Arial, sans-serif;
   margin-top: 0;
   margin-bottom: 60px;
   transform: skewY(-5deg);
   font-size: 52px;
-  text-shadow: 4px 4px #083D77;
+  text-shadow: 4px 4px #083d77;
   text-transform: uppercase;
   position: relative;
   z-index: 999 !important;
 }
-
-
 
 /* Form fields */
 form {
@@ -100,8 +94,8 @@ input[type="submit"] {
   font-size: 18px;
   border: none;
   border-radius: 5px;
-  background: #083D77;
-  color: #EBEBD3;
+  background: #083d77;
+  color: #ebebd3;
   transition: background 0.2s ease;
 }
 
@@ -111,14 +105,12 @@ input[type="submit"]:hover {
   cursor: pointer;
 }
 
-
-
 /* Bounce transition */
 .bounce-enter-active {
-  animation: bounce-in .5s;
+  animation: bounce-in 0.5s;
 }
 .bounce-leave-active {
-  animation: bounce-in .5s reverse;
+  animation: bounce-in 0.5s reverse;
 }
 @keyframes bounce-in {
   0% {
@@ -134,10 +126,9 @@ input[type="submit"]:hover {
   }
 }
 
-
-/* Moon experiment */
+/* Moon */
 body:after {
-  content: '';
+  content: "";
   position: fixed;
   bottom: 0;
   left: 0;
@@ -148,11 +139,12 @@ body:after {
   background: linear-gradient(180deg, #c3dbca 0%, #8f97a0 8%);
   border-radius: 100%;
   transform: translateY(180%) scale(2.75);
-  box-shadow: -1px -1px 6px 3px rgba(0,0,0,0.08), -1px -1px 6px rgba(0,0,0,0.3);
+  box-shadow: -1px -1px 6px 3px rgba(0, 0, 0, 0.08),
+    -1px -1px 6px rgba(0, 0, 0, 0.3);
 }
 
 body:before {
-  content: '';
+  content: "";
   position: fixed;
   bottom: -30px;
   left: 50px;
@@ -161,7 +153,7 @@ body:before {
   display: block;
   background: #ff945c;
   border-radius: 100%;
-  box-shadow: -1px 0px 6px rgba(0,0,0,0.4);
+  box-shadow: -1px 0px 6px rgba(0, 0, 0, 0.4);
 }
 @media only screen and (min-width: 700px) {
   body:before {
@@ -178,7 +170,7 @@ body:before {
   }
 }
 
-
+/* Rocket */
 #rocket {
   width: 50px;
   height: 50px;
@@ -251,7 +243,7 @@ body:before {
   }
 }
 
-
+/* Rocket - animations */
 #rocket.takeOff {
   animation: rocket-fly 2s forwards;
 }
@@ -269,7 +261,7 @@ body:before {
     opacity: 1;
   }
   55% {
-    fill: #EBEBD3;
+    fill: #ebebd3;
   }
   80% {
     opacity: 1;
@@ -283,14 +275,14 @@ body:before {
 @keyframes rocket-land {
   0% {
     transform: translate(0%, -70vh) rotate(-40deg);
-    fill: #EBEBD3;
+    fill: #ebebd3;
     opacity: 0;
   }
   80% {
     opacity: 1;
   }
   80% {
-    fill: #EBEBD3;
+    fill: #ebebd3;
     transform: translate(0%, 0%) rotate(-40deg);
   }
   100% {

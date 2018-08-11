@@ -8,24 +8,27 @@
     <h2 class="task-info">
       {{ this.$store.state.todaysTaskTime.label }}
     </h2>
-    <button type="button" v-on:click="completeTask">
+    <button
+      type="button"
+      v-on:click="completeTask"
+    >
       Complete
     </button>
   </div>
 </template>
 
 <script>
-import Title from '@/components/Title.vue'
+import Title from "@/components/Title.vue";
 
 export default {
-  name: 'TodaysTask',
+  name: "TodaysTask",
   components: {
     Title
   },
   methods: {
-    completeTask: function () {
-      this.$store.commit('completeTodaysTask')
+    completeTask: function() {
+      this.$store.commit("completeTodaysTask");
     }
   }
-}
+};
 </script>
